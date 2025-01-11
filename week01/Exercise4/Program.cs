@@ -24,7 +24,7 @@ class Program
                 numbers.Add(answer);
             }
         }
-        // Uncomment the following code to see the content's of the list
+        // Uncomment the following code to see the contents of the list
         // Console.WriteLine(string.Join(", ", numbers)); // Found this solution using a Bing search
         foreach (int number in numbers)
         {
@@ -44,7 +44,7 @@ class Program
         minMax = minNumbers.Min();
         Console.WriteLine($"The smallest positive number is: {minMax}");
         
-        // This for Stretch Challenge #2
+        // This is for Stretch Challenge #2
         numbers.Sort(); // Found this function on a StackOverflow post
         Console.WriteLine("The sorted list is:");
         foreach (int number in numbers)
