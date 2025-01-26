@@ -2,30 +2,45 @@ public class Word
 {
     private string _text;
     private bool _isHidden;
-    
+      
     public Word(string text)
     {
         _text = text;
         _isHidden = false;
     }
-    
+      
     public void Hide()
     {
-        // Need to complete; maybe something like if word is isHidden, then _text equals _ _ _
+        _isHidden = true;
     }
     public void Show()
     {
-        // Need to complete; maybe something like if word is not isHidden, then 
+        _isHidden = false;
     }
     public bool IsHidden()
     {
-        // Need to fix
-        return true;
+        if (_isHidden == true)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public string GetDisplayText()
     {
-        // Need to fix
-        return _text;
+        if (IsHidden() == true)
+        {
+            // Got help for this from a Bing search for how to replace a letter in a string
+            string original = _text;
+            char replacement = '_';
+            return _text = new string(replacement, original.Length);
+        }
+        else
+        {
+            return _text;
+        }
     }
 }
