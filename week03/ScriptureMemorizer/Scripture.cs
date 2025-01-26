@@ -20,11 +20,7 @@ public class Scripture
     int randomIndex;
     for (int i = 0; i <= (numberToHide-1); i++)
     {
-      do
-      {
-        randomIndex = randomGenerator.Next(_words.Count);
-      } while (_words[randomIndex].IsHidden() == true); 
-      
+      randomIndex = randomGenerator.Next(_words.Count);
       _words[randomIndex].Hide();
     }
   }
