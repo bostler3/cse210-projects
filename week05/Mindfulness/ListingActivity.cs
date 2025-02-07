@@ -24,12 +24,11 @@ public class ListingActivity : Activity
         Console.WriteLine("List as many responses as you can to the following prompt:");
         GetRandomPrompt();
         Console.Write("You may begin in...");
-        ShowCountDown(5);
+        ShowCountDown(7);
         Console.WriteLine("");
         List<string> userList = GetListFromUser();
         _count = userList.Count;
-        // Need to make sure this output looks like the video demonstration
-        Console.WriteLine($"Number of items listed: {_count}");
+        Console.WriteLine($"You listed {_count} items!");
     }
     
     public void GetRandomPrompt()

@@ -27,7 +27,7 @@ public class Activity
         ShowSpinner(2);
         Console.WriteLine("");
         Console.WriteLine($"You have completed another {_duration} seconds of the {_name} Activity.");
-        ShowSpinner(3);
+        ShowSpinner(5);
     }
     
     public void ShowSpinner(int seconds)
@@ -44,7 +44,7 @@ public class Activity
             string s = animationStrings[i];
             Console.Write(s);
             Thread.Sleep(2000);
-            Console.Write("\b \b"); // This isn't working in this compiler; need to try at home
+            Console.Write("\b \b");
             i++;
             if (i >= animationStrings.Count)
             {
@@ -60,7 +60,7 @@ public class Activity
         {
             Console.Write(i);
             Thread.Sleep(1000);
-            Console.Write("\b \b"); // This isn't working in this compiler; need to try at home
+            Console.Write("\b \b");
         }
     }
 }

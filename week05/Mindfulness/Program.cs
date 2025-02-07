@@ -1,7 +1,3 @@
-// Check spionner timing
-// Check line 31 note on ListingActivity()
-// Check on demo video if ReflectingActivity() has user input like the one of the instructions says it does
-
 // I attempted to Exceed Requirements by doing the following:
 // 1.  Putting the menu into functions
 // 2.  Creating another mindfulness activity called the Hymn Lines Activity

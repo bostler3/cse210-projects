@@ -38,13 +38,13 @@ public class HymnLinesActivity : Activity
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(_duration);
         Console.WriteLine("Think about one specific challenge you're facing right now.");
-        ShowSpinner(3);
+        ShowSpinner(10);
         Console.WriteLine("");
         Console.WriteLine("Now take a deep breath and then ponder these lines...");
         Console.WriteLine("");
         hymnLines = GetRandomHymnLines();
         Console.WriteLine(hymnLines);
-        ShowSpinner(3);
+        ShowSpinner(10);
         while (DateTime.Now < endTime)
         {
             Console.WriteLine("Do you feel any differently about the situation now?  Describe how.");

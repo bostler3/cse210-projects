@@ -36,14 +36,14 @@ public class ReflectingActivity : Activity
         Console.ReadLine(); // Got help for this line from a Bing search to know how to receive "Enter" input from user
         Console.WriteLine("Now ponder each of the following questions as they related to this experience.");
         Console.Write("You may begin in...");
-        ShowCountDown(7);
+        ShowCountDown(5);
         Console.Clear();
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(_duration);
         while (DateTime.Now < endTime)
         {
             DisplayQuestions();
-            ShowSpinner(3);
+            ShowSpinner(7);
             Console.WriteLine("");
         }
     }
