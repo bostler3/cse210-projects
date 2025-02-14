@@ -31,26 +31,32 @@ public class GoalManager
         string level2 = "A Star in the Making!";
         string level3 = "Champion!";
         string level4 = "Elite!";
+        int level1Max = 5;
+        int level2Max = 10;
+        int level3Max = 15;
         int numberOfGoalsCompleted = CalculateNumberOfGoalsCompleted();
 
-        if (numberOfGoalsCompleted <=5)
+        if (numberOfGoalsCompleted <= level1Max)
         {
-            return level1;
+            int numberOfGoalsLeft = level1Max + 1 - numberOfGoalsCompleted;
+            return $"Achievement level based on that number of completed goals: {level1}\nComplete {numberOfGoalsLeft} more goals to get to the next level - you can do it!";
         }
 
-        else if (numberOfGoalsCompleted <= 10)
+        else if (numberOfGoalsCompleted <= level2Max)
         {
-            return level2;
+            int numberOfGoalsLeft = level2Max + 1 - numberOfGoalsCompleted;
+            return $"Achievement level based on that number of completed goals: {level2}\nComplete {numberOfGoalsLeft} more goals to get to the next level - you can do it!";
         }
 
-        else if (numberOfGoalsCompleted <= 15)
+        else if (numberOfGoalsCompleted <= level3Max)
         {
-            return level3;
+            int numberOfGoalsLeft = level3Max + 1 - numberOfGoalsCompleted;
+            return $"Achievement level based on that number of completed goals: {level3}\nComplete {numberOfGoalsLeft} more goals to get to the next level - you can do it!";
         }
 
         else
         {
-            return level4;
+            return $"Achievement level based on that number of completed goals: {level4}  That’s the highest level!";
         }
     }
    
@@ -105,7 +111,7 @@ public class GoalManager
     {
         Console.WriteLine($"You have {_score} points.");
         Console.WriteLine($"You have completed {CalculateNumberOfGoalsCompleted()} goals.");
-        Console.WriteLine($"Achievement level based on that number of completed goals: {CalculateLevel()}");
+        Console.WriteLine(CalculateLevel());
     }
 
     public void ListGoalNames()
@@ -257,7 +263,6 @@ public class GoalManager
                 string amountCompletedString = parts[4];
                 int amountCompleted = int.Parse(amountCompletedString);
 
-                // Instead of hard-cording these if statements, could look up on the elements from ListGoalNames(); the definitions I added complicate this, so maybe consider doing a dictionary to separate key to lookup on and value (definition)?
                 if (parts[0] == "SimpleGoal")
                 {
                     SimpleGoal loadedsimpleGoal = new SimpleGoal(name, description, points);
